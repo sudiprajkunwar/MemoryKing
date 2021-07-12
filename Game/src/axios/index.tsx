@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Axios = axios.create({
-  baseURL: "https://my-json-server.typicode.com/sudiprajkunwar/Server/",
+  baseURL: "http://localhost:3000/",
 });
 
 export { Axios };
