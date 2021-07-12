@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { Form, Modal, Row, Typography } from "antd";
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Redirect } from "react-router-dom";
 import CustomButton from "../components/CustomButton";
 import CustomInput from "../components/CustomInput";
 import { postUser } from "../redux/ducks/user";
