@@ -1,0 +1,72 @@
+{
+    "cards": [{
+            "id": 1,
+            "title": "A"
+        },
+        {
+            "id": 2,
+            "title": "B"
+        },
+        {
+            "id": 3,
+            "title": "F"
+        },
+        {
+            "id": 4,
+            "title": "G"
+        },
+        {
+            "id": 5,
+            "title": "C"
+        },
+        {
+            "id": 6,
+            "title": "D"
+        },
+        {
+            "id": 7,
+            "title": "H"
+        },
+        {
+            "id": 8,
+            "title": "E"
+        }
+    ],
+    "users": [{
+            "name": "caroline",
+            "flips": 17,
+            "timer": 53,
+            "id": 1
+        },
+        {
+            "name": "jenny",
+            "flips": 20,
+            "timer": 30,
+            "id": 2
+        },
+        {
+            "name": "jennifer",
+            "flips": 16,
+            "timer": 14,
+            "id": 3
+        },
+        {
+            "name": "kyle",
+            "flips": 16,
+            "timer": 12,
+            "id": 4
+        },
+        {
+            "name": "kyle",
+            "flips": 16,
+            "timer": 12,
+            "id": 5
+        },
+        {
+            "name": "kyle",
+            "flips": 16,
+            "timer": 12,
+            "id": 6
+        }
+    ]
+}
