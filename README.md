@@ -1,6 +1,6 @@
 # MemoryKing
 
-<h1>Please run server at port 3000 to play the game</h1>
+<h1>Please run Json server at port 3000 to play the game</h1>
 
 ![image](https://user-images.githubusercontent.com/52486716/125371420-6abd5e80-e3a0-11eb-877b-23f82c13e046.png)
 ![image](https://user-images.githubusercontent.com/52486716/125371445-7741b700-e3a0-11eb-8331-0393c949c868.png)
