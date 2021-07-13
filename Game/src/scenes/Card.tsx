@@ -93,12 +93,14 @@ const Card: React.FC<CardProps> = ({
   }, [pairOfCards]);
 
   useEffect(() => {
-    if (matched.length === pairOfCards.length / 2) {
+    let distinctMatch: any = [...new Set(matched)];
+    if (distinctMatch.length === pairOfCards.length / 2) {
       setTimeout(() => {
         setVisible(true);
         setTimer(0);
       }, 1500);
     }
+    console.log(distinctMatch, "distinctMatch");
   }, [matched, pairOfCards]); // eslint-disable-line
 
   useEffect(() => {
