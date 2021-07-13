@@ -74,7 +74,11 @@ const UserDetailModal: React.FC<userProps> = ({ visible, flips, timer }) => {
   return (
     <div>
       {redirect && <Redirect to="/" />}
-      <StyledModal title="Your Score" visible={visible} footer={false}>
+      <StyledModal
+        title="Congratulations You Win"
+        visible={visible}
+        footer={false}
+      >
         <Row>
           <StyledForm name="basic" onFinish={onFinish} hideRequiredMark>
             <Form.Item

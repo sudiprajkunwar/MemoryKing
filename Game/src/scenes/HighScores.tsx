@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Heading from "../components/Heading";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../redux/ducks/user";
-import { Descriptions } from "antd";
+import { Descriptions, Table } from "antd";
 import { Users } from "../models/interface";
 import conSecMin from "./../components/conSecMin";
 import styled from "@emotion/styled";
@@ -31,9 +31,38 @@ const StyledList = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 17%;
+  width: 30%;
   margin: auto;
 `;
+
+const StyledButton = styled(CustomButton)`
+  width: 100%;
+  margin: 20px 0 0 0;
+`;
+
+const columns = [
+  {
+    title: "Rank",
+    key: "data",
+    render: (text: any, record: any, index: any) => index + 1,
+  },
+  {
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+  },
+  {
+    title: "Flips",
+    dataIndex: "flips",
+    key: "flips",
+  },
+  {
+    title: "Duration",
+    dataIndex: "timer",
+    key: "timer",
+    render: (item: any) => conSecMin(item),
+  },
+];
 const HighScores = () => {
   const dispatch = useDispatch();
 
@@ -43,21 +72,15 @@ const HighScores = () => {
 
   const user = useSelector(({ users }: any) => users.users);
   const userSort = user.sort((a: any, b: any) => a.flips - b.flips);
+
   return (
     <Wrapper>
       <Heading title="HighScore" fontSize="2em" />
       <Link to="/board">
-        <CustomButton>Start The Game</CustomButton>
+        <StyledButton>Start The Game</StyledButton>
       </Link>
       <StyledList>
-        {userSort.map((item: Users) => (
-          <Descriptions title={item.name} key={item.id}>
-            <Descriptions.Item label="flips">{item.flips}</Descriptions.Item>
-            <Descriptions.Item label="Duration">
-              {conSecMin(item.timer)}
-            </Descriptions.Item>
-          </Descriptions>
-        ))}
+        <Table dataSource={userSort} columns={columns} />;
       </StyledList>
     </Wrapper>
   );

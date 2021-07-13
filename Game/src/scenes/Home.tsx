@@ -3,7 +3,9 @@ import styled from "@emotion/styled";
 import CustomButton from "../components/CustomButton";
 import { Link } from "react-router-dom";
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  transform: translateY(200px);
+`;
 const App = () => {
   return (
     <div className="App">
